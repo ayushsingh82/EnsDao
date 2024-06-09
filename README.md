@@ -1,29 +1,46 @@
-This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org/) project bootstrapped with [`create-rainbowkit`](/packages/create-rainbowkit).
+# EnsDAO URI Creation and Publication Guide
 
-## Getting Started
+This guide provides a comprehensive step-by-step process for creating and publishing a DAO URI using the DAO Metadata Standard (EIP-4824). The DAO URI centralizes essential metadata about your DAO, making it easily accessible and transparent.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-```
+**EIP-4824** introduces the `daoURI`, a unified URI that consolidates a DAO's metadata, including governance, proposals, members, activities, and more. This standard provides a comprehensive overview of the DAO's operations, which are often spread across multiple platforms.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Prerequisites
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Before you begin, ensure you have:
+- Access to the Ethereum Mainnet.
+- An Ethereum Name Service (ENS) domain.
+- Relevant URIs for your DAO's members, activity log, proposals, issuers, and contracts registry (if applicable).
 
-## Learn More
+## Steps to Create and Publish DAO URI
 
-To learn more about this stack, take a look at the following resources:
+### 1. Network
 
-- [RainbowKit Documentation](https://rainbowkit.com) - Learn how to customize your wallet connection flow.
-- [wagmi Documentation](https://wagmi.sh) - Learn how to interact with Ethereum.
-- [Next.js Documentation](https://nextjs.org/docs) - Learn how to build a Next.js application.
+Ensure you are connected to the **Mainnet**.
 
-You can check out [the RainbowKit GitHub repository](https://github.com/rainbow-me/rainbowkit) - your feedback and contributions are welcome!
+### 2. DAO Metadata
 
-## Deploy on Vercel
+Fill in the following details to create your DAO URI:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Name**: Enter the name of your DAO.
+- **Description**: Provide a brief description of your DAO.
+- **Framework**: Specify the framework of your DAO (e.g., Custom).
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 3. Metadata URIs
+
+Provide the URIs for the following components of your DAO:
+
+- **Members URI**: Enter the URI that lists your DAO members.
+- **Activity Log URI**: Enter the URI that logs your DAO's activities.
+- **Proposals URI**: Enter the URI that lists your DAO's proposals.
+- **Issuers URI**: Enter the URI for issuers within your DAO.
+- **Contract Registry URI (optional)**: Enter the URI to your DAO's contracts registry, if available.
+- **Manager Address (optional)**: Enter the Ethereum address of your DAO manager, if applicable.
+- **Governance Document (optional)**: Enter the URI to your DAO's governance document (preferably in Markdown format).
+
+### 4. Agree and Publish
+
+Agree to create the `daoURI` text record in your ENS domain. This step links the metadata to your DAO's ENS domain.
+
+
